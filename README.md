@@ -55,7 +55,7 @@ Start BIND using:
 ```bash
 <<<<<<< HEAD
 docker run --name nginx -d --restart=always \
-  --publish 80:80/tcp --publish 443:443/tcp \
+  --publish 53:53/tcp --publish 53:53/udp --publish 127.0.0.1:953:953 \
   --volume /srv/nginx:/etc/nginx \
   lansmash/docker-nginx
 =======
