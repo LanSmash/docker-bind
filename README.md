@@ -53,17 +53,10 @@ docker build -t lansmash/docker-bind github.com/lansmash/docker-bind
 Start BIND using:
 
 ```bash
-<<<<<<< HEAD
-docker run --name nginx -d --restart=always \
-  --publish 53:53/tcp --publish 53:53/udp --publish 127.0.0.1:953:953 \
-  --volume /srv/nginx:/etc/nginx \
-  lansmash/docker-nginx
-=======
 docker run --name bind -d --restart=always \
   --publish 53:53/tcp --publish 53:53/udp --publish 127.0.0.1:953:953 \
   --volume /srv/bind:/etc/bind \
   lansmash/docker-bind
->>>>>>> parent of c7540a3... Updated for Nginx
 ```
 
 Watch the logs using:
