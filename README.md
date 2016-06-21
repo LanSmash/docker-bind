@@ -53,7 +53,7 @@ Start nginx using:
 
 ```bash
 docker run --name nginx -d --restart=always \
-  --publish 53:53/tcp --publish 53:53/udp --publish 127.0.0.1:953:953 \
+  --publish 80:80/tcp --publish 443:443/tcp \
   --volume /srv/nginx:/etc/nginx \
   lansmash/docker-nginx
 ```
