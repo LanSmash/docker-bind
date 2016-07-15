@@ -7,7 +7,7 @@ ENV DOCKERBIND_VERSION 1
 ENV DATA_DIR=/data
 ENV BIND_USER=bind
 
-RUN apt-get update && apt-get install -y bind9 perl dnsutils
+RUN apt-get update && apt-get install -y bind9 perl dnsutils && rm -rf /var/lib/apt/lists/*
 
 EXPOSE 53/udp 53/tcp 953/tcp
 VOLUME ["/etc/bind"]
